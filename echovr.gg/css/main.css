@@ -356,7 +356,7 @@ table {
   background-color: #5e6b79;
   border: .2em solid white;
   position: relative;
-  width: 8em;
+  width: 10em;
   display: block;
   margin: 1em auto 0 auto;
 }
@@ -398,7 +398,7 @@ These examples override the primary ('mobile first') styles.
 Modify as content requires.
 ========================================================================== */
 
-@media only screen and (min-width: 50em) and (min-height: 60em) {
+@media only screen and (min-width: 50em) and (min-height: 65em) {
   /* Style adjustments for viewports that meet the condition */
   body {
     font-size: 1.3em;
