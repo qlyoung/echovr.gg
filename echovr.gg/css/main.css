@@ -45,7 +45,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #ccc;
+  border-top: .2em solid #4d4e4d;
   margin: 1em 0;
   padding: 0;
 }
@@ -181,16 +181,6 @@ textarea {
   clear: both;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
-
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
   (min-resolution: 1.25dppx),
@@ -265,7 +255,6 @@ textarea {
 }
 
 body, html {
-  height: 100%;
   background-color: #000000;
 }
 
@@ -285,6 +274,10 @@ body, html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 a, a:visited, a:hover, a:active {
@@ -292,17 +285,55 @@ a, a:visited, a:hover, a:active {
 }
 
 #projectstextdiv {
-	position: absolute;
-	border-radius: 25px;
-	padding: 20px;
-	background: rgba(72, 72, 72, 0.9);
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+  position: relative;
+  border: .3em solid #4d4e4d;
+	padding: 1em;
+	background-color: #7a7e81db;
 	font-family: 'Roboto', sans-serif;
-	font-size: large;
 	color: white;
-	text-align: center;
+  text-align: center;
+  margin: 3em auto 3em auto;
+  width: 24em;
+}
+
+#titlearea {
+  position:relative;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+#headerbackground {
+  background-color: #4d4e4d;
+  transform: skew(-45deg);
+  height:2.8em;
+  margin: 0 auto;
+  width: 26em;
+  position: absolute;
+  top: 0;
+  left: -2.5em;
+  z-index: -1;
+}
+
+#headerbackground:before {
+  width: .5em;
+  height: 1em;
+  display:block;
+  content:"";
+  position: relative;
+  left: -1em;
+  background-color: #34a6a5;
+}
+
+#headerbackground:after {
+  width: .5em;
+  height: 2em;
+  float:right;
+  display:block;
+  content:"";
+  position: relative;
+  right: -1em;
+  top: -1em;
+  background-color: #34a6a5;
 }
 
 table {
@@ -310,15 +341,96 @@ table {
 }
 
 .projecttitle {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 .projectdesc {
-	font-size: small;
 	font-style: italic;
 }
 
 #pagesummary {
-	font-size: small;
 	font-style: italic;
+}
+
+.echobutton {
+  background-color: #5e6b79;
+  border: .2em solid white;
+  position: relative;
+  width: 10em;
+  display: block;
+  margin: 1em auto 0 auto;
+}
+
+.echobutton:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -.18em;
+  left: -.18em;
+  border-top: 1em solid white;
+  border-right: 1em solid transparent;
+}
+
+.echobutton:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -.33em;
+  left: -.33em;
+  border-top: 1em solid #717377;
+  border-right: 1em solid transparent;
+}
+
+.echobutton a {
+  text-decoration: none;
+  display: block;
+  color: white;
+  padding: .7em;
+}
+
+.echobutton:hover {
+  background-color: #a9adb0;
+}
+
+/* ==========================================================================
+EXAMPLE Media Queries for Responsive Design.
+These examples override the primary ('mobile first') styles.
+Modify as content requires.
+========================================================================== */
+
+@media only screen and (min-width: 50em) and (min-height: 65em) {
+  /* Style adjustments for viewports that meet the condition */
+  body {
+    font-size: 1.3em;
+  }
+}
+
+@media only screen and (max-width: 30em) {
+  /* Style adjustments for viewports that meet the condition */
+  body {
+    font-size: .8em;
+  }
+}
+
+@media only screen and (max-width: 20em) {
+  /* Style adjustments for viewports that meet the condition */
+  html {
+    line-height: 1;
+  }
+
+  #projectstextdiv {
+    padding: .1em;
+    max-width: 18em;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  #headerbackground {
+    height: 2.2em;
+    width: 18em;
+    left: -.5em;
+    top: -.3em;
+  }
 }
