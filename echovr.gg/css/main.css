@@ -374,6 +374,7 @@ table {
 	margin: 1em auto 0 auto;
 	padding: 2em;
 	cursor: pointer;
+  position: relative;
 }
 
 .echobutton:before {
@@ -423,10 +424,17 @@ table {
 }
 
 .echobutton a {
-	text-decoration: none;
-	display: block;
+  text-decoration: none;
+  display: block;
   color: var(--main-color);
-  line-height: 0;
+  line-height: 3.8em;
+  width: 14em;
+  height: 4em;
+  position: absolute;
+  margin: 0;
+  text-align: center;
+  left: 0;
+  top: 0;
 }
 
 .echobutton:hover::after {
