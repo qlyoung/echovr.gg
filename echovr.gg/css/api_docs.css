@@ -1,0 +1,239 @@
+@font-face {
+  font-family: 'Inconsolata';
+  src: url('../fonts/Inconsolata.ttf') format('truetype');
+}
+
+html {
+  color: white;
+  background: black url('../img/echovr_background_4k.jpg');
+  background-size: 100%;
+}
+
+.swagger-ui {
+  color: white;
+}
+
+.swagger-ui .info .title {
+  color: white;
+  font-family: Inconsolata, Consolas, monospace;
+}
+
+.swagger-ui .info .title small.version-stamp {
+  background-color: #2ec6c9;
+}
+
+.swagger-ui .info .title small {
+  border-radius: 0;
+}
+
+.swagger-ui .info li, .swagger-ui .info p, .swagger-ui .info table {
+  color: #ccc;
+}
+
+.swagger-ui .scheme-container {
+  background: none;
+  padding: 0;
+}
+
+.swagger-ui .opblock-tag small {
+  color: white;
+}
+
+.swagger-ui .opblock-tag {
+  color: white;
+}
+
+.swagger-ui .opblock .opblock-summary-description {
+  color: #aaa;
+}
+
+.swagger-ui .opblock .opblock-summary-operation-id, .swagger-ui .opblock .opblock-summary-path, .swagger-ui .opblock .opblock-summary-path__deprecated {
+  color: white;
+}
+
+.swagger-ui .opblock.opblock-get .opblock-summary-method {
+  background: #2ec6c9;
+}
+
+.swagger-ui .opblock.opblock-get {
+  border-color: #2ec6c9;
+  background: rgba(25, 36, 47, 0.8);
+}
+
+.swagger-ui .opblock.opblock-get:hover {
+  background: rgba(25, 36, 47, 1);
+}
+
+.swagger-ui .opblock.opblock-post .opblock-summary-method {
+  background: #548b69;
+
+}
+
+.swagger-ui .opblock.opblock-post {
+  border-color: #548b69;
+  background: rgba(25, 32, 29, 0.8);
+}
+
+.swagger-ui .opblock.opblock-post:hover {
+  background: rgba(25, 32, 29, 1);
+}
+
+
+.swagger-ui .opblock .opblock-summary-method {
+  border-radius: 0;
+}
+
+.swagger-ui .opblock {
+  border-radius: 0;
+}
+
+.swagger-ui svg:not(:root) {
+  filter: invert();
+}
+
+.swagger-ui section.models .model-container {
+  background: rgba(0, 0, 0, .5);
+  border-radius: 0;
+}
+
+.swagger-ui section.models .model-container:hover {
+  background: rgba(0, 0, 0, .7);
+}
+
+.swagger-ui .model-title {
+  color: #888;
+}
+
+.swagger-ui .opblock-tag:hover {
+  background: rgba(255, 255, 255, .1);
+}
+
+
+.swagger-ui section.models h4 {
+  color: #bbb;
+}
+
+.swagger-ui select {
+  background: #222 url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13.418 7.859a.695.695 0 0 1 .978 0 .68.68 0 0 1 0 .969l-3.908 3.83a.697.697 0 0 1-.979 0l-3.908-3.83a.68.68 0 0 1 0-.969.695.695 0 0 1 .978 0L10 11l3.418-3.141z"/></svg>') right 10px center no-repeat;
+  color: white;
+}
+
+.swagger-ui .model-box-control:focus, .swagger-ui .models-control:focus, .swagger-ui .opblock-summary-control:focus {
+  outline: 0;
+}
+
+.opblock-section {
+  /*background: blue;*/
+}
+
+.swagger-ui .opblock-description-wrapper p, .swagger-ui .opblock-external-docs-wrapper p, .swagger-ui .opblock-title_normal p {
+  color: white;
+}
+
+.swagger-ui .response-col_status {
+  color: white;
+}
+
+.swagger-ui table thead tr td, .swagger-ui table thead tr th {
+  color: white;
+}
+
+.swagger-ui .tab li {
+  color: white;
+}
+
+.swagger-ui .response-col_links {
+  color: white;
+}
+
+.swagger-ui .opblock .opblock-section-header {
+  background: hsla(0, 0%, 40%, 0.8);
+}
+
+.swagger-ui .opblock .opblock-section-header h4 {
+  color: white;
+}
+
+.swagger-ui .btn {
+  color: white;
+}
+
+.swagger-ui section.models {
+  border-color: rgba(255, 255, 255, .3);
+}
+
+.swagger-ui .response {
+  border-top: 1px solid #fff5;
+  margin-top: 1px;
+}
+
+.swagger-ui .tab li:first-of-type::after {
+  background: rgba(255, 255, 255, .2);
+}
+
+.swagger-ui .model-box {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.swagger-ui .model-title {
+  color: #aaa;
+}
+
+.swagger-ui .model {
+  color: #818dae;
+  font-family: Inconsolata, Consolas, monospace;
+}
+
+.swagger-ui section.models .model-container {
+  border: 1px solid #fff3;
+}
+
+.swagger-ui .parameter__name.required::after {
+  color: rgb(255, 69, 69);
+}
+
+.swagger-ui .model-toggle::after {
+  filter: invert();
+}
+
+.swagger-ui .info .title {
+  font-size: 3em;
+  position: relative;
+}
+
+@media only screen and (min-width: 1500px) {
+  .swagger-ui .info .title:before {
+    width: .2em;
+    height: .7em;
+    display: inline-block;
+    content: "";
+    position: absolute;
+    left: -.7em;
+    top: .2em;
+    background-color: #34a6a5;
+    transform: skew(-45deg);
+  }
+
+  .swagger-ui .info .title:after {
+    width: .2em;
+    height: .7em;
+    display: inline-block;
+    content: "";
+    position: absolute;
+    left: -1.1em;
+    top: .2em;
+    background-color: #548b69;
+    transform: skew(-45deg);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .opblock-summary-description {
+    display: none;
+  }
+
+  .swagger-ui .opblock .opblock-summary-path {
+    max-width: inherit;
+  }
+
+}
