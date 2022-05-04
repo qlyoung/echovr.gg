@@ -182,9 +182,9 @@ textarea {
 }
 
 @media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
 
@@ -205,16 +205,20 @@ textarea {
     box-shadow: none !important;
     text-shadow: none !important;
   }
+
   a,
   a:visited {
     text-decoration: underline;
   }
+
   a[href]:after {
     content: " (" attr(href) ")";
   }
+
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
+
   /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
@@ -223,14 +227,17 @@ textarea {
   a[href^="javascript:"]:after {
     content: "";
   }
+
   pre {
     white-space: pre-wrap !important;
   }
+
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
+
   /*
      * Printing Tables:
      * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
@@ -238,24 +245,32 @@ textarea {
   thead {
     display: table-header-group;
   }
+
   tr,
   img {
     page-break-inside: avoid;
   }
+
   p,
   h2,
   h3 {
     orphans: 3;
     widows: 3;
   }
+
   h2,
   h3 {
     page-break-after: avoid;
   }
 }
 
+@font-face {
+  font-family: 'Inconsolata';
+  src: url('/fonts/Inconsolata.ttf') format('truetype');
+}
+
 :root {
-	--main-color: white;
+  --main-color: white;
   --buttton-border-color: white;
   --button-color: #5e6b79;
   --button-hover-color: #a9adb0;
@@ -275,7 +290,7 @@ body, html {
 
   /* Full height */
   height: 100%;
-  filter:blur(4px);
+  filter: blur(4px);
 
   /* Center and scale the image nicely */
   background-position: center;
@@ -288,16 +303,16 @@ body, html {
 }
 
 a, a:visited, a:hover, a:active {
-	color: #d3d3d3;
+  color: #d3d3d3;
 }
 
 #projectstextdiv {
   position: relative;
   border: .3em solid #4d4e4d;
-	padding: 1em;
-	background-color: #7a7e81cc;
-	font-family: 'Roboto', sans-serif;
-	color: white;
+  padding: 1em;
+  background-color: #7a7e81cc;
+  font-family: 'Roboto', sans-serif;
+  color: white;
   text-align: center;
   margin: 3em auto 3em auto;
   width: 24em;
@@ -305,16 +320,22 @@ a, a:visited, a:hover, a:active {
 }
 
 #titlearea {
-  position:relative;
+  position: relative;
   text-transform: uppercase;
   z-index: 1;
   text-shadow: black 0 0 1.2em;
+
+}
+
+#titlearea h1 {
+  /*font-size: 2em;*/
+  font-family: Inconsolata, Consolas, monospace;
 }
 
 #headerbackground {
   background-color: #4d4e4d;
   transform: skew(-45deg);
-  height:2.8em;
+  height: 2.8em;
   margin: 0 auto;
   width: 26em;
   position: absolute;
@@ -326,8 +347,8 @@ a, a:visited, a:hover, a:active {
 #headerbackground:before {
   width: .5em;
   height: 1em;
-  display:block;
-  content:"";
+  display: block;
+  content: "";
   position: relative;
   left: -1em;
   background-color: #34a6a5;
@@ -336,9 +357,9 @@ a, a:visited, a:hover, a:active {
 #headerbackground:after {
   width: .5em;
   height: 2em;
-  float:right;
-  display:block;
-  content:"";
+  float: right;
+  display: block;
+  content: "";
   position: relative;
   right: -1em;
   top: -1em;
@@ -346,7 +367,7 @@ a, a:visited, a:hover, a:active {
 }
 
 table {
-	width: 100%;
+  width: 100%;
 }
 
 .projecttitle {
@@ -354,73 +375,75 @@ table {
 }
 
 .projectdesc {
-	font-style: italic;
+  font-style: italic;
 }
 
 .projectdesc p {
-	margin-top: .2em;
+  margin-top: .2em;
 }
 
 #pagesummary {
-	font-style: italic;
+  font-style: italic;
 }
 
 .echobutton {
-	width: 14em;
-	height: 1em;
-	display: block;
-	color: white;
-	text-align: center;
-	margin: 1em auto 0 auto;
-	padding: 2em;
-	cursor: pointer;
+  width: 14em;
+  height: 1em;
+  display: block;
+  color: white;
+  text-align: center;
+  margin: 1em auto 0 auto;
+  padding: 2em;
+  cursor: pointer;
   position: relative;
+  /*font-family: Inconsolata, Consolas, monospace;*/
+  /*font-weight: 900;*/
+  /*font-size: 1.2em;*/
 }
 
 .echobutton:before {
-	content: "";
-	position: absolute;
-	display: block;
-	background-color: var(--buttton-border-color);
-	width: 14em;
-	height: 3.66em;
-	z-index: -2;
-	transform: scale(1.1);
-	clip-path: polygon(8% 0%, 100% 0%, 100% 75%, 92% 100%, 0% 100%, 0% 25%);
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: var(--buttton-border-color);
+  width: 14em;
+  height: 3.66em;
+  z-index: -2;
+  transform: scale(1.1);
+  clip-path: polygon(8% 0%, 100% 0%, 100% 75%, 92% 100%, 0% 100%, 0% 25%);
   margin-top: -1.86em;
   margin-left: -2em;
 }
 
 .echobutton:after {
-	content: "";
-	position: absolute;
-	display: block;
-	background-color: var(--button-color);
-	background: linear-gradient(175deg, #4d5761 0%, var(--button-color) 100%);
-	width: 14.8em;
-	height: 3.5em;
-	z-index: -1;
-	clip-path: polygon(8% 0%, 100% 0%, 100% 75%, 92% 100%, 0% 100%, 0% 25%);
-	margin-top: -1.8em;
-	margin-left: -2.4em;
+  content: "";
+  position: absolute;
+  display: block;
+  background: var(--button-color) linear-gradient(175deg, #4d5761 0%, var(--button-color) 100%);
+  width: 14.8em;
+  height: 3.5em;
+  z-index: -1;
+  clip-path: polygon(8% 0%, 100% 0%, 100% 75%, 92% 100%, 0% 100%, 0% 25%);
+  margin-top: -1.8em;
+  margin-left: -2.4em;
 }
 
 .echobutton.small {
-	margin-top: 0em;
+  margin-top: 0em;
 }
 
 .echobutton.small:before {
-	height: 34px;
-	margin-top: -7px;
-	clip-path: polygon(8% 0%, 100% 0%, 100% 55%, 92% 100%, 0% 100%, 0% 45%);
+  height: 34px;
+  margin-top: -7px;
+  clip-path: polygon(8% 0%, 100% 0%, 100% 55%, 92% 100%, 0% 100%, 0% 45%);
 }
 
 .echobutton.small:after {
-	height: 30px;
-	margin-top: -23px;
-	margin-left: -8px;
-	width: 240px;
-	clip-path: polygon(8% 0%, 100% 0%, 100% 50%, 92% 100%, 0% 100%, 0% 50%);
+  height: 30px;
+  margin-top: -23px;
+  margin-left: -8px;
+  width: 240px;
+  clip-path: polygon(8% 0%, 100% 0%, 100% 50%, 92% 100%, 0% 100%, 0% 50%);
 }
 
 .echobutton a {
@@ -438,8 +461,8 @@ table {
 }
 
 .echobutton:hover::after {
-	background-color: var(--button-hover-color);
-	background: linear-gradient(175deg, var(--button-hover-color) 0%, var(--button-hover-color) 100%);
+  background-color: var(--button-hover-color);
+  background: linear-gradient(175deg, var(--button-hover-color) 0%, var(--button-hover-color) 100%);
 }
 
 /* ==========================================================================
